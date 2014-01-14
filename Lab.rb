@@ -39,6 +39,8 @@ class SortedArray
   end
 
   def index(target)
-    raise NotImplementedError.new("You need to implement the index method!")
+    @internal_arr.find_index(target)
+
+    #raise NotImplementedError.new("You need to implement the index method!")
   end
 end
