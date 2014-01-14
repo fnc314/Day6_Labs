@@ -19,8 +19,8 @@ class SortedArray
   end
 
   def first_larger_index(target, start_ind=0, end_ind=@internal_arr.size)
-    i = start_ind
-    @internal_arr.slice(start_ind..end_ind).each { |x| 
+    i = 0
+    @internal_arr.each { |x| 
       i += 1 if target > x
     }
     return i
