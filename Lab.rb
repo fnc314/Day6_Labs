@@ -21,16 +21,16 @@ class SortedArray
 
   def [](index)
     @internal_arr[index]
-    raise NotImplementedError.new("You need to implement the [] method!")
+    #raise NotImplementedError.new("You need to implement the [] method!")
   end
 
   def first_larger_index(target, start_ind=0, end_ind=@internal_arr.size)
     i = start_ind
-    @internal_arr.each { |x| 
+    @internal_arr.slice(start_ind..end_ind).each { |x| 
       i += 1 if target > x
     }
     return i
-    raise NotImplementedError.new("You need to implement the first_larger_index method!")
+    #raise NotImplementedError.new("You need to implement the first_larger_index method!")
   end
 
   def index(target)
