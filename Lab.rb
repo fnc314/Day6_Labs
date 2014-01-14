@@ -3,16 +3,21 @@ class SortedArray
 
   def initialize(input_arr=[])
     @internal_arr = []
-    #input_arr.each { |x| add(x) }
+    input_arr.each { |x| add(x) }
     # Fill in the rest of the initialize method here.
     # What should you do with each element of the incoming array?
   end
 
   def add(new_ele)
-    #sort_arr = []
+    # if first_larger_index(new_ele) == 0
+    #   @internal_arr.insert(first_larger_index(new_ele), new_ele)
+    # else
+    #   @internal_arr[first_larger_index(new_ele)] = new_ele
+    # end
+    @internal_arr.insert(first_larger_index(new_ele), new_ele)
 
     # Hint: Use the Array#insert method.
-    raise NotImplementedError.new("You need to implement the add method!")
+    #raise NotImplementedError.new("You need to implement the add method!")
   end
 
   def size
